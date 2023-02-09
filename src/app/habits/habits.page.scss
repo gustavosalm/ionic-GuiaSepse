@@ -1,0 +1,56 @@
+#footBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 0 5% 5% 5%;
+
+  .pageIndicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+
+    .pageBullet {
+      height: 14px;
+      width: 14px;
+      margin: 0 5px;
+      border-radius: 10px;
+      background-color: rgb(151, 151, 151);
+      transition: width .35s, background-color .35s;
+      &.current {
+        background-color: aqua;
+        width: 30px;
+      }
+    }
+  }
+
+  .pageButtons{
+    text-transform: none;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    transition: width .35s;
+    background-color: white;
+    color: rgb(60, 206, 206);
+    box-shadow: 0px 0px 2px rgb(8 8 8 / 50%), 0px 0px 2px rgb(8 8 8 / 50%);
+
+    &:nth-child(2){
+      float: left;
+    }
+    &:last-child {
+      white-space: nowrap;
+      float: right;
+      background-color: rgb(60, 206, 206);
+      color: white;
+    }
+  }
+
+  &.collapsed {
+    .pageButtons:nth-child(2){
+      width: 100%;
+    }
+    .pageButtons:last-child{
+      width: 0%;
+    }
+  }
+}

@@ -1,28 +1,33 @@
-<!-- <ion-header [translucent]="true"></ion-header> -->
+<ion-header>
+  <div class="pageHeader">
+    <img src="../../assets/icon/LogoIcon.svg">
+  </div>
+</ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="pageHeader">
-    <span>guia rápido</span>
-    <h1>sepse</h1>
+
+  <div class="title">
+    <h1>O que é Sepse?</h1>
   </div>
 
-  <ion-card class="tooltipCard">
+  <ion-card class="infoCard greenCard">
     <ion-card-content>
-      <div></div>
-      <p>Sepse é uma alteração no funcionamento de um ou mais órgãos após uma infecção.<br>É grave e pode levar à morte!</p>
+      <p><strong>Sepse</strong> é uma alteração no funcionamento de um ou mais órgãos após uma infecção.</p>
+      <p>É grave e sua <strong>identificação precoce</strong> é essencial para evitar complicação e morte.</p>
     </ion-card-content>
   </ion-card>
 
-  <ion-card class="infoCard">
+  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
     <ion-card-content>
-      <p>Como saber se estou com Sepse?</p>
+      <h1>Como saber se estou com Sepse?</h1>
     </ion-card-content>
   </ion-card>
+
   <div>
     <ion-tab-button class="navCard" tab="tab1/habits">
-      <ion-card class="infoCard">
+      <ion-card class="infoCard"  style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
         <ion-card-content>
-          <p>Orientações para prevenir a Sepse</p>
+          <h1>Hábitos que evitam infecções</h1>
         </ion-card-content>
       </ion-card>
     </ion-tab-button>

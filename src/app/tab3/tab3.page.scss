@@ -1,0 +1,19 @@
+.listContainer {
+  padding: 0 1.5em;
+  margin-top: 2.5em;
+
+  ion-item {
+    --background: #F8F9FA;
+    --border-color: #E8E9EB;
+    --padding-start: 0;
+
+    ion-label {
+      font: 600 1.125em/1.36em Inter;
+      color: #343538;
+    }
+
+    ion-icon {
+      color: black;
+    }
+  }
+}

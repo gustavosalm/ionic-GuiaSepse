@@ -1,4 +1,29 @@
 <!-- <ion-header [translucent]="true"></ion-header> -->
 
 <ion-content [fullscreen]="true">
+  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+    <ion-card-content>
+      <h1>Como saber se estou com Sepse?</h1>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="tooltipCard" [hidden]="ind>0">
+    <ion-card-content>
+      <div style="background-image: url('../../assets/icon/TooltipIcon.svg');"></div>
+      <p>Entenda mais sobre os sinais de suspeição em <strong>Como saber se estou com Sepse?</strong></p>
+    </ion-card-content>
+  </ion-card>
+
+  <div id="footBar" class="collapsedLeft">
+    <div class="pageIndicator">
+      <div class="pageBullet current"></div>
+      <div class="pageBullet"></div>
+      <div class="pageBullet"></div>
+      <div class="pageBullet"></div>
+      <div class="pageBullet"></div>
+      <div class="pageBullet"></div>
+    </div>
+    <button class="pageButtons" color="dark" (click)="previousPage()">Voltar</button>
+    <button class="pageButtons" color="primary" (click)="nextPage()">Próxima</button>
+  </div>
 </ion-content>

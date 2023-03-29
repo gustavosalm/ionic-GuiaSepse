@@ -83,15 +83,46 @@ ion-content {
 
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 85%;
+  background-size: 100%;
   background-position: bottom right;
 
   ion-card-content {
+    height: 100%;
+
     h1 {
+      position: relative;
       font-size: 2em;
       width: 75%;
       color: rgb(90, 90, 90);
       font-weight: 700;
+      z-index: 2;
+    }
+
+    ion-button {
+      position: absolute;
+      right: 1em;
+      bottom: 1em;
+      --background: #DCFBF3;
+      color: #00BB7E;
+      --box-shadow: none;
+      --border-radius: 0.3em;
+      text-transform: none;
+
+      ion-icon {
+        margin-left: .5em;
+      }
+
+      &::part(native) span {
+        font: 700 1em/1em Inter;
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      height: 55%;
+      z-index: 1;
     }
   }
 
@@ -139,7 +170,7 @@ ion-content {
     justify-content: center;
     margin-bottom: 1em;
 
-    .pageBullet {
+    .tabsPageBullet, .habitsPageBullet {
       height: 0.75em;
       width: 0.75em;
       margin: 0 5px;
@@ -153,7 +184,7 @@ ion-content {
     }
   }
 
-  .pageButtons{
+  .tabsPageButtons, .habitsPageButtons{
     text-transform: none;
     border-radius: 10px;
     width: 120px;
@@ -181,10 +212,10 @@ ion-content {
   }
 
   &.collapsedRight {
-    .pageButtons:nth-child(2){
+    .tabsPageButtons:nth-child(2), .habitsPageButtons:nth-child(2){
       width: 99%;
     }
-    .pageButtons:last-child{
+    .tabsPageButtons:last-child, .habitsPageButtons:last-child{
       width: 0%;
       border: 0;
       opacity: 0;
@@ -192,12 +223,12 @@ ion-content {
   }
 
   &.collapsedLeft {
-    .pageButtons:nth-child(2){
+    .tabsPageButtons:nth-child(2), .habitsPageButtons:nth-child(2){
       width: 0%;
       border: 0;
       opacity: 0;
     }
-    .pageButtons:last-child{
+    .tabsPageButtons:last-child, .habitsPageButtons:last-child{
       width: 99%;
     }
   }

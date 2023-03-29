@@ -1,0 +1,8 @@
+.tooltipCard {
+  opacity: 1;
+  transition: opacity .25s;
+
+  &.hidden {
+    opacity: 0 !important;
+  }
+}

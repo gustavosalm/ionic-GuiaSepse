@@ -15,13 +15,14 @@ export class HabitsPage implements OnInit {
   constructor(private router : Router) { }
 
   ngOnInit() {
-    this.pageBullets = document.getElementsByClassName('pageBullet');
-    this.pageButtons = document.getElementsByClassName('pageButtons');
+    this.pageBullets = document.getElementsByClassName('habitsPageBullet');
+    this.pageButtons = document.getElementsByClassName('habitsPageButtons');
     this.footBar = document.getElementById('footBar');
+
+    this.pageBullets[this.bulletInd].classList.add('current');
   }
 
   nextPage(){
-    console.log('aaa');
     if(this.bulletInd < 2){
       if(this.bulletInd === 0) this.pageButtons[0].innerHTML = 'Anterior';
       this.pageBullets[this.bulletInd++].classList.remove('current');
@@ -31,7 +32,6 @@ export class HabitsPage implements OnInit {
   }
 
   previousPage() {
-    console.log('bbb');
     if(this.bulletInd > 0){
       if(this.bulletInd === 2) this.footBar.classList.remove('collapsedRight');
       this.pageBullets[this.bulletInd--].classList.remove('current');

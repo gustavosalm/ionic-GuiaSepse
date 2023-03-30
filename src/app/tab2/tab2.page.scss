@@ -1,8 +1,23 @@
-.tooltipCard {
-  opacity: 1;
+.tabsSectionInfo {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 90%;
+  height: 45%;
+  overflow-y: scroll;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.25em;
   transition: opacity .25s;
 
-  &.hidden {
-    opacity: 0 !important;
+  p {
+    color: #343538;
+    font: 500 1.125em/1.375em Inter;
+    margin-top: 2em;
   }
+}
+
+.hidden {
+  opacity: 0 !important;
+  z-index: -1;
 }

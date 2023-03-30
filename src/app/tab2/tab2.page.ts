@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Tab2Page {
   pageBullets: any;
   pageButtons: any;
+  sections: any;
   footBar: any;
   toolTip: any;
   ind: number = 0;
@@ -17,8 +18,9 @@ export class Tab2Page {
   ngOnInit() {
     this.pageBullets = document.getElementsByClassName('tabsPageBullet');
     this.pageButtons = document.getElementsByClassName('tabsPageBullet');
-    this.toolTip = document.getElementsByClassName('tooltipCard');
-    this.footBar = document.getElementById('footBar');
+    this.sections = document.getElementsByClassName('tabsSectionInfo');
+    this.toolTip = document.getElementsByClassName('tabsTooltipCard');
+    this.footBar = document.getElementById('tabsFootBar');
 
     if(this.ind === 0) this.footBar.classList.add('collapsedLeft');
   }
@@ -31,8 +33,10 @@ export class Tab2Page {
         this.footBar.classList.remove('collapsedLeft');
         this.toolTip[0].classList.add('hidden');
       }
+      this.sections[this.ind].classList.add('hidden');
       this.pageBullets[this.ind++].classList.remove('current');
       this.pageBullets[this.ind].classList.add('current');
+      this.sections[this.ind].classList.remove('hidden');
       if(this.ind === 5) this.footBar.classList.add('collapsedRight');
     }
   }
@@ -42,8 +46,10 @@ export class Tab2Page {
 
     if(this.ind > 0){
       if(this.ind === 5) this.footBar.classList.remove('collapsedRight');
+      this.sections[this.ind].classList.add('hidden');
       this.pageBullets[this.ind--].classList.remove('current');
       this.pageBullets[this.ind].classList.add('current');
+      this.sections[this.ind].classList.remove('hidden');
       if(this.ind === 0) {
         this.footBar.classList.add('collapsedLeft');
         this.toolTip[0].classList.remove('hidden');

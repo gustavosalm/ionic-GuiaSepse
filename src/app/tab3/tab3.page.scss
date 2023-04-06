@@ -1,19 +1,123 @@
+.tab3SubPageHeader {
+  width: 90%;
+  margin: auto;
+  margin-top: 2.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #E8E9EB;
+
+  img {
+    width: 1.5em;
+  }
+
+  h1 {
+    font: 600 1.5em/1.8em Inter;
+    color: black;
+    margin: 0;
+  }
+
+  div {
+    width: 1.5em;
+  }
+}
+
 .listContainer {
   padding: 0 1.5em;
   margin-top: 2.5em;
 
-  ion-item {
+  ion-tab-button, ion-item {
     --background: #F8F9FA;
     --border-color: #E8E9EB;
     --padding-start: 0;
+    --padding-end: 0;
+    --padding-bottom: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #E9ECEF;
+    margin-bottom: 1em;
+    font-size: unset;
+    max-width: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-    ion-label {
-      font: 600 1.125em/1.36em Inter;
+    div {
+      width: auto;
+
+      ion-label {
+        font: 600 1.125em/1.375em Inter;
+        color: #343538;
+        margin: 0 0 0 1em;
+        float: left;
+      }
+
+      img {
+        float: left;
+        width: 1.5em;
+      }
+    }
+
+    img {
+      width: 1.5em;
+    }
+  }
+}
+
+.teamList {
+  width: 90%;
+  margin: auto;
+  margin-top: .4em;
+  font-size: unset;
+
+  .teamItem {
+    padding-bottom: .5em;
+    border-bottom: 2px solid #E9ECEF;
+    margin-top: 2em;
+
+    h1 {
+      font: 600 1.125em/1.375em Inter;
       color: #343538;
+      margin: 0 0 .5em 0;
     }
 
-    ion-icon {
-      color: black;
+    p {
+      font: 400 1em/1.1875em Inter;
+      color: #525657;
+      margin: 0;
     }
+  }
+}
+
+.refsCard {
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+  --background: #fff;
+  border: 1px solid rgba(11, 19, 36, 0.07);
+  box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: .5em;
+  font-size: unset;
+
+  img {
+    width: 1.5em;
+  }
+
+  div {
+    border: 1px solid #E9ECEF;
+    margin: 0 .5em;
+    height: 1.5em;
+  }
+
+  p {
+    font: 600 1em/1.5em Inter;
+    color: #343538;
+    margin: 0;
   }
 }

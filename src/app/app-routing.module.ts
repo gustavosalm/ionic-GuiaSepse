@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'habits',
-    loadChildren: () => import('./habits/habits.module').then( m => m.HabitsPageModule)
+    loadChildren: () => import('./tab1/habits/habits.module').then( m => m.HabitsPageModule)
   }
 ];
 @NgModule({

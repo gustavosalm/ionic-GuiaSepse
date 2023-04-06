@@ -21,7 +21,23 @@ const routes: Routes = [
       },
       {
         path: 'tab1/habits',
-        loadChildren: () => import('../habits/habits.module').then( m => m.HabitsPageModule)
+        loadChildren: () => import('../tab1/habits/habits.module').then( m => m.HabitsPageModule)
+      },
+      {
+        path: 'tab3/team',
+        loadChildren: () => import('../tab3/team/team.module').then( m => m.TeamPageModule)
+      },
+      {
+        path: 'tab3/refs',
+        loadChildren: () => import('../tab3/refs/refs.module').then( m => m.RefsPageModule)
+      },
+      {
+        path: 'tab3/terms',
+        loadChildren: () => import('../tab3/terms/terms.module').then( m => m.TermsPageModule)
+      },
+      {
+        path: 'tab3/politics',
+        loadChildren: () => import('../tab3/politics/politics.module').then( m => m.PoliticsPageModule)
       },
       {
         path: '',

@@ -1,0 +1,81 @@
+<!-- <ion-header></ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+    <ion-card-content>
+      <h1>Como saber se estou com Sepse?</h1>
+      <img src="../../assets/illustrations/IllustrationQuestion.svg">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="staticTooltipCard">
+    <ion-card-content>
+      <img src="../../assets/icon/TooltipIcon.svg">
+      <p>Esses são alguns dos fatores de risco para Sepse.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div id="questionsContainer">
+    <div class="questionsList">
+      <div class="listItem">
+        <p>Você tem mais de 60 anos ou menos de 1 ano?</p>
+        <ion-item>
+          <ion-label>Sim</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(0, 0)"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Não</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(0, 1)"></ion-checkbox>
+        </ion-item>
+      </div>
+      <div class="listItem">
+        <p>Está com imunidade baixa?</p>
+        <ion-item>
+          <ion-label>Sim</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(1, 0)"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Não</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(1, 1)"></ion-checkbox>
+        </ion-item>
+      </div>
+      <div class="listItem">
+        <p>Tem doença crônica no pulmão ou fígado?</p>
+        <ion-item>
+          <ion-label>Sim</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(2, 0)"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Não</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(2, 1)"></ion-checkbox>
+        </ion-item>
+      </div>
+      <div class="listItem">
+        <p>Tem diabetes ou AIDS?</p>
+        <ion-item>
+          <ion-label>Sim</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(3, 0)"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Não</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(3, 1)"></ion-checkbox>
+        </ion-item>
+      </div>
+      <div class="listItem">
+        <p>Tirou o baço?</p>
+        <ion-item>
+          <ion-label>Sim</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(4, 0)"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Não</ion-label>
+          <ion-checkbox (ionChange)="checkingBox(4, 1)"></ion-checkbox>
+        </ion-item>
+      </div>
+    </div>
+    <div class="questionsFooter">
+      <button (click)="goBack()">Voltar</button>
+      <button class="{{(allChecked !== 5) ? 'disabled' : ''}}">Próximo</button>
+    </div>
+  </div>
+</ion-content>

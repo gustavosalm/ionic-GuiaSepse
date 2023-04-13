@@ -75,7 +75,7 @@
     </div>
     <div class="questionsFooter">
       <button (click)="goBack()">Voltar</button>
-      <button class="{{(allChecked !== 5) ? 'disabled' : ''}}">Próximo</button>
+      <button class="{{(allChecked === 5) ? 'enabled' : ''}}">Próximo</button>
     </div>
   </div>
 </ion-content>

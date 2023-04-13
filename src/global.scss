@@ -76,9 +76,9 @@ ion-content {
 
     p {
       float: left;
-      width: 80%;
+      // width: 80%;
       margin: 0;
-      font: 400 1em/1.1em Inter;
+      font: 400 0.9em/1.1em Inter;
       color: #343538;
     }
   }
@@ -186,15 +186,17 @@ ion-content {
 
 #habitsFootBar, #tabsFootBar {
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  padding: 0 5% 5% 5%;
+  width: 90%;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 5rem;
+  padding: 0;
 
   .pageIndicator {
     display: flex;
     justify-content: center;
-    margin-bottom: 1em;
 
     .tabsPageBullet, .habitsPageBullet {
       height: 0.75em;
@@ -211,25 +213,29 @@ ion-content {
   }
 
   .tabsPageButtons, .habitsPageButtons{
+    position: absolute;
+    bottom: 0;
     text-transform: none;
     border-radius: 10px;
-    width: 7.5em;
-    height: 2.5em;
+    width: 8em;
+    min-width: max-content;
+    height: auto;
+    padding: 1rem 2rem;
     font: 700 1em/1em Inter;
     color: #525657;
-    transition: width .35s, opacity .35s;
+    transition: width .35s, opacity .35s, padding 0.35s;
     background-color: #fff;
     box-shadow: 0px 0px 2px rgb(8 8 8 / 50%), 0px 0px 2px rgb(8 8 8 / 50%);
     white-space: nowrap;
     overflow: hidden;
 
     &:nth-child(2){
-      float: left;
+      left: 0;
       border: 1px solid rgba(11, 19, 36, 0.07);
       box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
     }
     &:last-child {
-      float: right;
+      right: 0;
       background-color: #00BB7E;
       color: white;
       border: 1px solid #00895F;
@@ -239,23 +245,25 @@ ion-content {
 
   &.collapsedRight {
     .tabsPageButtons:nth-child(2), .habitsPageButtons:nth-child(2){
-      width: 99%;
+      width: 100%;
     }
     .tabsPageButtons:last-child, .habitsPageButtons:last-child{
+      min-width: 0%;
       width: 0%;
-      border: 0;
+      padding: 1rem 0;
       opacity: 0;
     }
   }
 
   &.collapsedLeft {
     .tabsPageButtons:nth-child(2), .habitsPageButtons:nth-child(2){
+      min-width: 0%;
       width: 0%;
-      border: 0;
+      padding: 1rem 0;
       opacity: 0;
     }
     .tabsPageButtons:last-child, .habitsPageButtons:last-child{
-      width: 99%;
+      width: 100%;
     }
   }
 }

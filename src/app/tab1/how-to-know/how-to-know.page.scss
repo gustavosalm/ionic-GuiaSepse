@@ -70,28 +70,33 @@ ion-content {
     button {
       width: auto;
       height: auto;
-      background-color: #fff;
-      border: 1px solid rgba(11, 19, 36, 0.07);
       border-radius: 0.625rem;
-      box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-      color: #525657;
       font: 700 1em/1em Inter;
       text-transform: none;
       padding: 1rem 2rem;
+      box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
       transition: background-color .25s, color .25s;
 
-      &.disabled {
+      &:first-child {
+        float: left;
+        color: #525657;
+        background-color: #fff;
+        border: 1px solid rgba(11, 19, 36, 0.07);
+      }
+
+      &:last-child {
+        float: right;
         opacity: 1;
         background-color: #E9ECEF;
         border-color: #CED4DA;
         color: #ADB5BD;
-      }
 
-      &:first-child {
-        float: left;
-      }
-      &:last-child {
-        float: right;
+        &.enabled {
+          background-color: #00BB7E;
+          border-color: #00895F;
+          box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
+          color: #fff;
+        }
       }
     }
   }

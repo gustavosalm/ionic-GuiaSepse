@@ -21,18 +21,22 @@ export class HowToKnowPage implements OnInit {
   checkingBox(ind: number, box: number) {
     if(this.boxDenies) return;
     let item = this.checkboxes[ind];
-    if(this.boxStates[ind] == box) {
-      item.children[box+1].children[1].checked = true;
+    if(this.boxStates[ind] === box) {
+      // item.children[box+1].children[1].checked = true;
+      this.boxStates[ind] = -1;
+      this.allChecked--;
+      return;
     }
     else if(this.boxStates[ind] !== -1) {
       this.boxDenies = true;
       item.children[this.boxStates[ind]+1].children[1].checked = false;
-      console.log('aaa');
       setTimeout(() => {
         this.boxDenies = false;
       }, 100);
     }
-    else this.allChecked++;
+    else {
+      this.allChecked++;
+    }
     this.boxStates[ind] = box;
   }
 

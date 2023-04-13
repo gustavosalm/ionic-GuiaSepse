@@ -1,3 +1,22 @@
+.pageFooter {
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
+  text-align: center;
+
+  p {
+    color: #343538;
+    font: 600 1em/1.5em Inter;
+    margin: 0;
+    margin-bottom: .5em;
+  }
+
+  span {
+    color: #525657;
+    font: 400 1em/1.2em Inter;
+  }
+}
+
 .tab3SubPageHeader {
   width: 90%;
   margin: auto;
@@ -7,7 +26,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
   border-bottom: 2px solid #E8E9EB;
 
   img {
@@ -91,6 +110,15 @@
   }
 }
 
+.byCordel {
+  position: fixed;
+  width: 35%;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .refsCard {
   width: 90%;
   margin: auto;
@@ -99,25 +127,28 @@
   border: 1px solid rgba(11, 19, 36, 0.07);
   box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: .5em;
+  padding: 0;
   font-size: unset;
 
-  img {
-    width: 1.5em;
+  ion-card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5em;
+    font-size: unset;
+
+    img {
+      width: 1.5em;
+    }
+
+    p {
+      font: 600 1em/1.5em Inter;
+      color: #343538;
+      margin: 0;
+      border-left: 2px solid #E9ECEF;
+      padding-left: .5em;
+      margin-left: .5em;
+    }
   }
 
-  div {
-    border: 1px solid #E9ECEF;
-    margin: 0 .5em;
-    height: 1.5em;
-  }
-
-  p {
-    font: 600 1em/1.5em Inter;
-    color: #343538;
-    margin: 0;
-  }
 }

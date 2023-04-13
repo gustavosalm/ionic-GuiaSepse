@@ -6,7 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  emailSpan: any;
 
   constructor() {}
+
+  ngOnInit(){
+    this.emailSpan = document.getElementById('emailText');
+  }
+
+  copyEmail(){
+    if (!navigator.clipboard){
+      this.emailSpan.focus();
+      document.execCommand("Copy");
+      this.emailSpan.blur();
+    }
+    else {
+      navigator.clipboard.writeText(this.emailSpan.innerHTML);
+    }
+  }
 
 }

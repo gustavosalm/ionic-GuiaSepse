@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Clipboard } from '@capacitor/clipboard';
 
 @Component({
   selector: 'app-tab3',
@@ -14,15 +15,14 @@ export class Tab3Page {
     this.emailSpan = document.getElementById('emailText');
   }
 
-  copyEmail(){
-    if (!navigator.clipboard){
-      this.emailSpan.focus();
-      document.execCommand("Copy");
-      this.emailSpan.blur();
-    }
-    else {
-      navigator.clipboard.writeText(this.emailSpan.innerHTML);
-    }
+  async copyEmail(){
+    await Clipboard.write({
+      string: this.emailSpan.innerHTML
+    }).catch((err) => {
+      if(navigator.clipboard) navigator.clipboard.writeText(this.emailSpan.innerHTML);
+    }).then(() => {
+      console.log('copier to clipboard');
+    });
   }
 
 }

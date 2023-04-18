@@ -50,7 +50,7 @@ ion-content {
   align-items: center;
 
   opacity: 1;
-  transition: opacity .25s 0s, height .25s 0s, padding .25s 0s;
+  transition: opacity .25s 0s, height .25s 0s, padding .25s 0s, margin-top .25s 0s;
   right: 0;
   left: 0;
 
@@ -60,6 +60,7 @@ ion-content {
     padding: 0 5px;
     border: none;
     z-index: -1;
+    margin-top: 0;
   }
 
   ion-card-content {
@@ -187,7 +188,7 @@ ion-content {
 #habitsFootBar, #tabsFootBar {
   position: fixed;
   width: 90%;
-  bottom: 5%;
+  bottom: 1.5rem;
   left: 0;
   right: 0;
   margin: auto;

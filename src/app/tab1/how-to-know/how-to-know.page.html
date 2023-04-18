@@ -15,7 +15,7 @@
     </ion-card-content>
   </ion-card>
 
-  <div id="questionsContainer">
+  <div id="questionsContainer1">
     <div class="questionsList">
       <div class="listItem">
         <p>Você tem mais de 60 anos ou menos de 1 ano?</p>
@@ -75,7 +75,11 @@
     </div>
     <div class="questionsFooter">
       <button (click)="goBack()">Voltar</button>
-      <button class="{{(allChecked === 5) ? 'enabled' : ''}}">Próximo</button>
+      <button (click)="changePart(2)" class="{{(allChecked === 5) ? 'enabled' : ''}}">Próximo</button>
     </div>
+  </div>
+
+  <div id="questionsContainer2" class="contCollapsed">
+    <button (click)="changePart(1)">Voltar</button>
   </div>
 </ion-content>

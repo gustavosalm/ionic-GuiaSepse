@@ -2,6 +2,79 @@ ion-content {
   --overflow: hidden;
 }
 
+.progressBarContainer {
+  position: relative;
+  width: 90%;
+  height: 2rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 1rem;
+  transition: height .25s, opacity .25s, margin-top .25s;
+
+  &.hidden {
+    opacity: 0;
+    height: 0;
+    margin-top: 0;
+  }
+
+  p {
+    color: #343538;
+    font: 500 1rem/1.2rem Inter;
+    margin: 0 0 .5rem 0;
+  }
+
+  div {
+    position: absolute;
+    height: -webkit-fill-available;
+    left: 0;
+
+    &.progressBar {
+      border-radius: 10px;
+      background-color: #E9ECEF;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &#fillBar {
+      width: 16.5%;
+      background-color: #00BB7E;
+      transition: width .25s 0s;
+    }
+  }
+}
+
+.listCheckBox {
+  --background: transparent;
+  border: 2px solid #CED4DA;
+  border-radius: 20px;
+  --border-color: transparent;
+  margin-bottom: .5rem;
+  transition: border-color .25s;
+
+  &.item-checkbox-checked {
+    border-color: #00BB7E;
+  }
+
+  ion-checkbox {
+    --size: 1.25rem;
+    --checkmark-width: 2px;
+    --background: white;
+    --checkmark-color: #00BB7E;
+    --border-color-checked: #00BB7E;
+    --background-checked: white;
+
+    &::part(container) {
+      border-radius: 50%;
+      --border-color: #CED4DA;
+    }
+  }
+
+  ion-label {
+    color: #343538;
+    font: 400 1em/1.2em Inter;
+  }
+}
+
 #questionsContainer1 {
   position: absolute;
   width: 100%;
@@ -34,42 +107,10 @@ ion-content {
         color: #343538;
         font: 600 1em/1.5em Inter;
       }
-
-      ion-item {
-        --background: transparent;
-        border: 2px solid #CED4DA;
-        border-radius: 20px;
-        --border-color: transparent;
-        margin-bottom: .5rem;
-        transition: border-color .25s;
-
-        &.item-checkbox-checked {
-          border-color: #00BB7E;
-        }
-
-        ion-checkbox {
-          --size: 1.25rem;
-          --checkmark-width: 2px;
-          --background: white;
-          --checkmark-color: #00BB7E;
-          --border-color-checked: #00BB7E;
-          --background-checked: white;
-
-          &::part(container) {
-            border-radius: 50%;
-            --border-color: #CED4DA;
-          }
-        }
-
-        ion-label {
-          color: #343538;
-          font: 400 1em/1.2em Inter;
-        }
-      }
     }
   }
 
-  .questionsFooter {
+  .staticQuestionsFooter {
     padding: 1.5rem 1.5rem 1rem 1.5rem;
     position: fixed;
     bottom: 0;
@@ -98,12 +139,14 @@ ion-content {
         background-color: #E9ECEF;
         border-color: #CED4DA;
         color: #ADB5BD;
+        pointer-events: none;
 
         &.enabled {
           background-color: #00BB7E;
           border-color: #00895F;
           box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
           color: #fff;
+          pointer-events: initial;
         }
       }
     }
@@ -125,5 +168,102 @@ ion-content {
   &.contCollapsed {
     opacity: 0;
     z-index: -100;
+  }
+
+  .listItem {
+    width: 100%;
+    padding: 0 5%;
+    margin: auto;
+    margin-bottom: 9rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
+    text-align: center;
+    overflow-y: scroll;
+
+    opacity: 0;
+    z-index: -100;
+    // transition: opacity .25s;
+
+    &.current {
+      opacity: 1;
+      z-index: 0;
+    }
+
+    p {
+      color: #343538;
+      font: 600 1.5rem/1.75rem Inter;
+      margin: 0;
+    }
+
+    img {
+      margin: 1.5rem 0;
+      width: 45%;
+    }
+  }
+
+  .questionsFooter {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+
+    &.disabled {
+      button:last-child {
+        background-color: #E9ECEF;
+        border-color: #CED4DA;
+        color: #ADB5BD;
+        pointer-events: none;
+      }
+    }
+
+    button {
+      position: absolute;
+      bottom: 0;
+      width: 9em;
+      height: auto;
+      border-radius: 0.625rem;
+      font: 700 1em/1em Inter;
+      text-transform: none;
+      padding: 1rem 2rem;
+      transition: width .35s, opacity .35s, padding 0.35s, background-color .25s, color .25s;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &:first-child {
+        left: 0;
+        background-color: #fff;
+        border: 1px solid rgba(11, 19, 36, 0.07);
+        box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+        color: #525657;
+      }
+
+      &:last-child {
+        right: 0;
+        background-color: #00BB7E;
+        border: 1px solid #00895F;
+        box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
+        color: #fff;
+      }
+    }
+
+    &.collapsedLeft {
+      button:first-child{
+        min-width: 0%;
+        width: 0%;
+        padding: 1rem 0;
+        opacity: 0;
+      }
+      button:last-child {
+        width: 100%;
+      }
+    }
   }
 }

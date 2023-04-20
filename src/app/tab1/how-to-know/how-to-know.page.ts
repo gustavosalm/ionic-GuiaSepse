@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { ResultModalComponent } from '../result-modal/result-modal.component';
 
 @Component({
   selector: 'app-how-to-know',
@@ -7,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./how-to-know.page.scss'],
 })
 export class HowToKnowPage implements OnInit {
+  resultOverlay = ResultModalComponent;
   checkboxes: any = [];
   formContainers: any = [];
   containerTop: any;
@@ -19,7 +22,7 @@ export class HowToKnowPage implements OnInit {
   currentItem = 0;
   formsPart = 1;
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, private modalController: ModalController) { }
 
   ngOnInit() {
     this.checkboxes = document.getElementsByClassName('listItem');
@@ -36,7 +39,7 @@ export class HowToKnowPage implements OnInit {
     if(this.boxStates[ind] === box) {
       // item.children[box+1].children[1].checked = true;
       this.boxStates[ind] = -1;
-      this.allChecked--;
+      if(ind < 5) this.allChecked--;
       this.refreshCurrentItem();
       return;
     }
@@ -48,7 +51,7 @@ export class HowToKnowPage implements OnInit {
       }, 100);
     }
     else {
-      this.allChecked++;
+      if(ind < 5) this.allChecked++;
     }
     this.currentItem = ind;
     this.boxStates[ind] = box;
@@ -88,14 +91,17 @@ export class HowToKnowPage implements OnInit {
   }
 
   nextIndex(){
-    if(this.currentItem + 1 > 10) return;
+    if(this.currentItem + 1 > 10){
+      this.getResults();
+      return;
+    }
 
     if(this.currentItem + 1 === 10) {
       this.containerFooter[0].children[1].innerHTML = 'Resultado';
     }
-    else if(this.currentItem === 5){
-      this.containerFooter[0].classList.remove('collapsedLeft');
-    }
+    // else if(this.currentItem === 5){
+    //   this.containerFooter[0].classList.remove('collapsedLeft');
+    // }
 
     this.checkboxes[this.currentItem].classList.remove('current');
     this.checkboxes[this.currentItem+1].classList.add('current');
@@ -104,14 +110,18 @@ export class HowToKnowPage implements OnInit {
   }
 
   previousIndex(){
-    if(this.currentItem - 1 < 5) return;
+    if(this.currentItem < 5) return;
 
     if(this.currentItem === 10) {
       this.containerFooter[0].children[1].innerHTML = 'Próximo';
     }
-    else if(this.currentItem - 1 === 5) {
-      this.containerFooter[0].classList.add('collapsedLeft');
+    else if(this.currentItem - 1 === 4) {
+      this.changePart(1);
+      return;
     }
+    // else if(this.currentItem - 1 === 5) {
+    //   this.containerFooter[0].classList.add('collapsedLeft');
+    // }
 
     this.checkboxes[this.currentItem].classList.remove('current');
     this.checkboxes[this.currentItem-1].classList.add('current');
@@ -119,7 +129,32 @@ export class HowToKnowPage implements OnInit {
     this.refreshCurrentItem();
   }
 
+  async getResults(){
+    let result = 0;
+    let mod = 2;
+    this.boxStates.forEach((val, ind) => {
+      if(ind === 5) mod = 12;
+      else if(ind === 10) mod = 30;
+      result -= (val - 1) * mod;
+    });
+
+    const modal = await this.modalController.create({
+      component: this.resultOverlay,
+      cssClass: 'resultOverlay',
+      mode: 'md',
+      backdropDismiss: true,
+      componentProps: {
+        finalPoints: result
+      }
+    });
+
+    await modal.present();
+    const { role } = await modal.onDidDismiss();
+
+    if(role === 'closeTab') this.goBack();
+  }
+
   goBack(){
-    this.router.navigateByUrl('tabs/tab1');
+    document.getElementById('tab-button-tab1')?.click();
   }
 }

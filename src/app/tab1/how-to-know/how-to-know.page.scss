@@ -117,7 +117,7 @@ ion-content {
     width: 100%;
 
     button {
-      width: auto;
+      width: 9em;
       height: auto;
       border-radius: 0.625rem;
       font: 700 1em/1em Inter;
@@ -220,6 +220,7 @@ ion-content {
         background-color: #E9ECEF;
         border-color: #CED4DA;
         color: #ADB5BD;
+        box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
         pointer-events: none;
       }
     }

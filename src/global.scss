@@ -63,7 +63,7 @@ ion-content {
     margin-top: 0;
   }
 
-  ion-card-content {
+  ion-card-content, .cardContent {
     padding-top: 0;
     padding-bottom: 0;
     display: flex;
@@ -88,8 +88,8 @@ ion-content {
 .infoCard {
   // height: 210px;
   width: 90%;
-  margin: 15px auto 0 auto;
-  margin-top: 15px;
+  margin: auto;
+  margin-top: 1rem;
   background: #FFFFFF;
   border: 1px solid rgba(11, 19, 36, 0.07);
   box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
@@ -155,16 +155,20 @@ ion-content {
 
     border: 1px solid #00895F;
     box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
-    padding-right: 25%;
+    padding-right: 30%;
     // padding-top: .5em;
 
     ion-card-content {
       width: 100%;
-      padding: 30%;
+      // padding: 30%;
+      padding: 1rem 0;
+      max-height: 45vw;
+      height: min-content;
 
       p {
-        position: absolute;
-        top: 1rem;
+        // position: absolute;
+        position: relative;
+        // top: 1rem;
         left: 1rem;
         font: 400 1em/1.18em Inter;
         color: #FFFFFF;
@@ -266,5 +270,14 @@ ion-content {
     .tabsPageButtons:last-child, .habitsPageButtons:last-child{
       width: 100%;
     }
+  }
+}
+
+.resultOverlay {
+  padding-top: calc(5rem + 54vw);
+  height: -webkit-fill-available;
+
+  &::part(backdrop){
+    opacity: 0.25;
   }
 }

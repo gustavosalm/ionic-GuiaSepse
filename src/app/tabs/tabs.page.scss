@@ -2,4 +2,37 @@ ion-tab-bar {
   --background: #ffffff;
   --border: none;
   box-shadow: 0px 2px 5px #888888;
+
+  ion-tab-button {
+    position: relative;
+
+    ion-label {
+      color: #ADB5BD;
+      font: 600 0.875rem/1.5rem Inter;
+    }
+
+    ion-icon {
+      color: #ADB5BD;
+    }
+
+    div {
+      position: absolute;
+      top: .25rem;
+    }
+
+    &.tab-selected {
+      ion-label, ion-icon {
+        color: #00895F;
+      }
+
+      div {
+        background-color: #ABFEE6;
+        width: 1rem;
+        height: 1rem;
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+      }
+    }
+  }
+
 }

@@ -51,8 +51,19 @@ ion-content {
   margin-bottom: .5rem;
   transition: border-color .25s;
 
+  ion-icon {
+    color: transparent;
+    transition: color .25s;
+    position: absolute;
+    right: 1.625rem;
+  }
+
   &.item-checkbox-checked {
     border-color: #00BB7E;
+
+    ion-icon {
+      color: #00BB7E;
+    }
   }
 
   ion-checkbox {
@@ -64,13 +75,16 @@ ion-content {
     --background-checked: white;
 
     &::part(container) {
-      border-radius: 50%;
-      --border-color: #CED4DA;
+      opacity: 0;
+      // border-radius: 50%;
+      // --border-color: #CED4DA;
     }
   }
 
   ion-label {
     color: #343538;
+    position: absolute;
+    left: .5rem;
     font: 400 1em/1.2em Inter;
   }
 }
@@ -131,6 +145,10 @@ ion-content {
         color: #525657;
         background-color: #fff;
         border: 1px solid rgba(11, 19, 36, 0.07);
+
+        &:active {
+          background-color: #fff;
+        }
       }
 
       &:last-child {
@@ -147,6 +165,10 @@ ion-content {
           box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
           color: #fff;
           pointer-events: initial;
+
+          &:active {
+            background-color: #00895F;
+          }
         }
       }
     }
@@ -244,6 +266,10 @@ ion-content {
         border: 1px solid rgba(11, 19, 36, 0.07);
         box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
         color: #525657;
+
+        &:active {
+          background-color: #fff;
+        }
       }
 
       &:last-child {
@@ -252,6 +278,10 @@ ion-content {
         border: 1px solid #00895F;
         box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
         color: #fff;
+
+        &:active {
+          background-color: #00895F;
+        }
       }
     }
 

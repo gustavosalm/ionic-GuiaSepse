@@ -17,8 +17,24 @@
   p {
     color: #343538;
     font: 500 1.125em/1.375em Inter;
-    margin-top: 2em;
+    margin-top: 2rem;
     margin-bottom: 0;
+  }
+
+  @media (max-width: 500px) and (max-height: 800px) {
+    margin-top: 1.25rem;
+
+    p {
+      margin-top: .5rem;
+    }
+  }
+
+  @media (min-width: 500px) and (max-height: 1000px){
+    margin-top: 1.25rem;
+
+    p {
+      margin-top: .5rem;
+    }
   }
 }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +15,7 @@ export class HabitsPage implements OnInit {
   toolTip: any;
   bulletInd: number = 0;
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, private modalController: ModalController) { }
 
   ngOnInit() {
     this.pageBullets = document.getElementsByClassName('habitsPageBullet');
@@ -55,7 +56,8 @@ export class HabitsPage implements OnInit {
       if(this.bulletInd === 0) this.pageButtons[0].innerHTML = 'Voltar';
     }
     else{
-      this.router.navigateByUrl('tabs/tab1');
+      this.modalController.dismiss();
+      // this.router.navigateByUrl('tabs/tab1');
     }
   }
 }

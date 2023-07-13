@@ -1,6 +1,12 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "ionic-GuiaSepse",
+	"appId": "io.cordel.guiaSepse",
+	"appName": "Guia Rápido: Sepse",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false,
+      "androidScaleType": "CENTER_CROP"
+    }
+  }
 }

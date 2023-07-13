@@ -155,6 +155,7 @@ export class HowToKnowPage implements OnInit {
   }
 
   goBack(){
-    document.getElementById('tab-button-tab1')?.click();
+    this.modalController.dismiss();
+    // document.getElementById('tab-button-tab1')?.click();
   }
 }

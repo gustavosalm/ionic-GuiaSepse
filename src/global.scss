@@ -284,8 +284,9 @@ ion-content {
 .resultOverlay {
   padding-top: calc(5rem + 54vw);
   height: -webkit-fill-available;
+  --backdrop-opacity: 0.25 !important;
 
-  &::part(backdrop){
-    opacity: 0.25;
-  }
+  // &::part(backdrop){
+  //   opacity: 0.25;
+  // }
 }

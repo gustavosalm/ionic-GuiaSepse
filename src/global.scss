@@ -36,7 +36,7 @@ ion-content {
   --background: #F8F9FA;
 }
 
-.habitsTooltipCard, .tabsTooltipCard, .staticTooltipCard {
+.howItHappensTooltipCard, .positionsTooltipCard, .tabsTooltipCard, .staticTooltipCard {
   padding: 10px 5px;
   width: 90%;
   height: 5em;
@@ -53,6 +53,11 @@ ion-content {
   transition: opacity .25s 0s, height .25s 0s, padding .25s 0s, margin-top .25s 0s;
   right: 0;
   left: 0;
+
+  &.yellow {
+    background: #FFFAE6;
+    border: 1px solid #FAB031;
+  }
 
   &.hidden {
     opacity: 0 !important;
@@ -151,18 +156,18 @@ ion-content {
 
     background: #00BB7E url("./assets/backgrounds/GreenCardBackground.svg") no-repeat;
     background-position: center right;
-    background-size: cover;
+    background-size: 60%;
 
     border: 1px solid #00895F;
     box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
-    padding-right: 30%;
+    padding-right: 40%;
     // padding-top: .5em;
 
     ion-card-content {
       width: 100%;
       // padding: 30%;
-      padding: 1rem 0;
-      max-height: 45vw;
+      padding: 1rem 0 2rem 0;
+      // max-height: 45vw;
       height: min-content;
 
       p {
@@ -170,7 +175,7 @@ ion-content {
         position: relative;
         // top: 1rem;
         left: 1rem;
-        font: 400 1em/1.18em Inter;
+        font: 400 1em/1.5em Inter;
         color: #FFFFFF;
       }
     }
@@ -189,7 +194,7 @@ ion-content {
   height: 100px !important;
 }
 
-#habitsFootBar, #tabsFootBar {
+.footBar {
   position: fixed;
   width: 90%;
   bottom: 1.5rem;
@@ -203,7 +208,7 @@ ion-content {
     display: flex;
     justify-content: center;
 
-    .tabsPageBullet, .habitsPageBullet {
+    .pageBullets {
       height: 0.75em;
       width: 0.75em;
       margin: 0 5px;
@@ -217,7 +222,7 @@ ion-content {
     }
   }
 
-  .tabsPageButtons, .habitsPageButtons{
+  .pageButtons {
     position: absolute;
     bottom: 0;
     text-transform: none;
@@ -228,7 +233,7 @@ ion-content {
     padding: 1rem 2rem;
     font: 700 1em/1em Inter;
     color: #525657;
-    transition: width .35s, opacity .35s, padding 0.35s, background-color .25s ease-out;
+    transition: width .35s, opacity .35s, padding 0.35s, background-color .25s ease-out, color .25s ease-out;
     background-color: #fff;
     box-shadow: 0px 0px 2px rgb(8 8 8 / 50%), 0px 0px 2px rgb(8 8 8 / 50%);
     white-space: nowrap;
@@ -257,10 +262,12 @@ ion-content {
   }
 
   &.collapsedRight {
-    .tabsPageButtons:nth-child(2), .habitsPageButtons:nth-child(2){
+    .pageButtons:nth-child(2) {
       width: 100%;
+      background-color: #00BB7E;
+      color: white;
     }
-    .tabsPageButtons:last-child, .habitsPageButtons:last-child{
+    .pageButtons:last-child {
       min-width: 0%;
       width: 0%;
       padding: 1rem 0;
@@ -269,13 +276,13 @@ ion-content {
   }
 
   &.collapsedLeft {
-    .tabsPageButtons:nth-child(2), .habitsPageButtons:nth-child(2){
+    .pageButtons:nth-child(2) {
       min-width: 0%;
       width: 0%;
       padding: 1rem 0;
       opacity: 0;
     }
-    .tabsPageButtons:last-child, .habitsPageButtons:last-child{
+    .pageButtons:last-child {
       width: 100%;
     }
   }

@@ -1,0 +1,41 @@
+<!-- <ion-header></ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+    <ion-card-content>
+      <h1>Fatores que podem causar lesões</h1>
+      <img src="../../assets/illustrations/tab2/IllustrationFactors.svg">
+    </ion-card-content>
+  </ion-card>
+
+  <div class="factorsSectionInfo">
+    <img src="../../assets/illustrations/tab2/factors/Illustration1.svg">
+    <p>Pressionar por muito tempo regiões do corpo</p>
+  </div>
+
+  <div class="factorsSectionInfo hidden">
+    <img src="../../assets/illustrations/tab2/factors/Illustration2.svg">
+    <p>Massagear regiões em vermelho</p>
+  </div>
+
+  <div class="factorsSectionInfo hidden">
+    <img src="../../assets/illustrations/tab2/factors/Illustration3.svg">
+    <p>Utilização de água demasiadamente quente</p>
+  </div>
+
+  <div class="factorsSectionInfo hidden">
+    <img src="../../assets/illustrations/tab2/factors/Illustration4.svg">
+    <p>Uso de dispositivos em forma de anel ou argola e de aquecimento na pele como pulseiras, anéis, brincos, relógios e colares</p>
+  </div>
+
+  <div class="footBar" id="factorsFootBar">
+    <div class="pageIndicator">
+      <div class="pageBullets factorsPageBullet"></div>
+      <div class="pageBullets factorsPageBullet"></div>
+      <div class="pageBullets factorsPageBullet"></div>
+      <div class="pageBullets factorsPageBullet"></div>
+    </div>
+    <button class="pageButtons factorsPageButtons" color="dark" (click)="previousPage()">Voltar</button>
+    <button class="pageButtons factorsPageButtons" color="primary" (click)="nextPage()">Próxima</button>
+  </div>
+</ion-content>

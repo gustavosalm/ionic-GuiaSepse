@@ -1,0 +1,48 @@
+<!-- <ion-header></ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+    <ion-card-content>
+      <h1>Posições recomendadas</h1>
+      <img src="../../assets/illustrations/tab2/IllustrationPositions.svg">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="positionsTooltipCard hidden">
+    <ion-card-content>
+      <img src="../../assets/icon/TooltipIcon.svg">
+      <p>Procure se movimentar na cama ou na cadeira.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="positionsSectionInfo">
+    <img src="../../assets/illustrations/tab2/positions/Illustration1.svg">
+    <p>Ative nossa notificação para você se lembrar de realizar a mudança de posição a cada 2 horas</p>
+  </div>
+
+  <div class="positionsSectionInfo hidden">
+    <img src="../../assets/illustrations/tab2/positions/Illustration2.svg">
+    <p>De frente</p>
+  </div>
+
+  <div class="positionsSectionInfo hidden">
+    <img src="../../assets/illustrations/tab2/positions/Illustration3.svg">
+    <p>De barriga para baixo</p>
+  </div>
+
+  <div class="positionsSectionInfo hidden">
+    <img src="../../assets/illustrations/tab2/positions/Illustration4.svg">
+    <p>De lado</p>
+  </div>
+
+  <div class="footBar" id="positionsFootBar">
+    <div class="pageIndicator">
+      <div class="pageBullets positionsPageBullet"></div>
+      <div class="pageBullets positionsPageBullet"></div>
+      <div class="pageBullets positionsPageBullet"></div>
+      <div class="pageBullets positionsPageBullet"></div>
+    </div>
+    <button class="pageButtons positionsPageButtons" color="dark" (click)="previousPage()">Voltar</button>
+    <button class="pageButtons positionsPageButtons" color="primary" (click)="nextPage()">Próxima</button>
+  </div>
+</ion-content>

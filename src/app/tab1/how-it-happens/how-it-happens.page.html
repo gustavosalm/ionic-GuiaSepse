@@ -1,0 +1,42 @@
+<!-- <ion-header></ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+    <ion-card-content>
+      <h1>Como acontece?</h1>
+      <img src="../../assets/illustrations/IllustrationHowItHappens.svg">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="howItHappensTooltipCard yellow hidden">
+    <ion-card-content>
+      <img src="../../assets/icon/TooltipIconYellow.svg">
+      <p>A dor e o incômodo dos ferimentos podem afetar a qualidade de vida.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="howItHappensSectionInfo">
+    <img src="../../assets/illustrations/howItHappens/Illustration1.svg">
+    <p>A Lesão Por Pressão é um dano localizado na pele podendo alcançar músculos e ossos, ocorre como resultado da pressão intensa, geralmente sobre elevações ósseas ou relacionada ao uso de outros dispositivos devido a imobilidade ou falta de sensibilidade.</p>
+  </div>
+
+  <div class="howItHappensSectionInfo hidden">
+    <img src="../../assets/illustrations/howItHappens/Illustration2.svg">
+    <p>A Lesão Por Pressão inicia com vermelhidão no local e pode piorar rapidamente</p>
+  </div>
+
+  <div class="howItHappensSectionInfo hidden">
+    <img src="../../assets/illustrations/howItHappens/Illustration3.svg">
+    <p>Os pontos vermelhos indicam as principais áreas de ferimento</p>
+  </div>
+
+  <div class="footBar" id="howItHappensFootBar">
+    <div class="pageIndicator">
+      <div class="pageBullets howItHappensPageBullet"></div>
+      <div class="pageBullets howItHappensPageBullet"></div>
+      <div class="pageBullets howItHappensPageBullet"></div>
+    </div>
+    <button class="pageButtons howItHappensPageButtons" color="dark" (click)="previousPage()">Voltar</button>
+    <button class="pageButtons howItHappensPageButtons" color="primary" (click)="nextPage()">Próxima</button>
+  </div>
+</ion-content>

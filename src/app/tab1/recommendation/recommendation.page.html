@@ -1,0 +1,47 @@
+<!-- <ion-header></ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+    <ion-card-content>
+      <h1>Recomendações</h1>
+      <img src="../../assets/illustrations/IllustrationRecommendation.svg">
+    </ion-card-content>
+  </ion-card>
+
+  <div class="recommendationSectionInfo">
+    <img src="../../assets/illustrations/recommendation/Illustration1.svg">
+    <p>Siga as orientações dos profissionais de saúde e realize consultas pelo menos uma vez por semana</p>
+  </div>
+
+  <div class="recommendationSectionInfo hidden">
+    <img src="../../assets/illustrations/recommendation/Illustration2.svg">
+    <p>Se alimente com frutas, verturas e beba água regularmente</p>
+  </div>
+
+  <div class="recommendationSectionInfo hidden">
+    <img src="../../assets/illustrations/recommendation/Illustration3.svg">
+    <p>Use medicamentos conforme prescrição</p>
+  </div>
+
+  <div class="recommendationSectionInfo hidden">
+    <img src="../../assets/illustrations/recommendation/Illustration4.svg">
+    <p>Mantenha a higiene corporal adequada</p>
+  </div>
+
+  <div class="recommendationSectionInfo hidden">
+    <img src="../../assets/illustrations/recommendation/Illustration5.svg">
+    <p>Lave as mãos com frequência</p>
+  </div>
+
+  <div class="footBar" id="recommendationFootBar">
+    <div class="pageIndicator">
+      <div class="pageBullets recommendationPageBullet"></div>
+      <div class="pageBullets recommendationPageBullet"></div>
+      <div class="pageBullets recommendationPageBullet"></div>
+      <div class="pageBullets recommendationPageBullet"></div>
+      <div class="pageBullets recommendationPageBullet"></div>
+    </div>
+    <button class="pageButtons recommendationPageButtons" color="dark" (click)="previousPage()">Voltar</button>
+    <button class="pageButtons recommendationPageButtons" color="primary" (click)="nextPage()">Próxima</button>
+  </div>
+</ion-content>

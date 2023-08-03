@@ -20,12 +20,32 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
-        path: 'tab1/habits',
-        loadChildren: () => import('../tab1/habits/habits.module').then( m => m.HabitsPageModule)
+        path: 'tab4',
+        loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
       },
       {
         path: 'tab1/howtoknow',
         loadChildren: () => import('../tab1/how-to-know/how-to-know.module').then( m => m.HowToKnowPageModule)
+      },
+      {
+        path: 'tab1/howithappens',
+        loadChildren: () => import('../tab1/how-it-happens/how-it-happens.module').then( m => m.HowItHappensPageModule)
+      },
+      {
+        path: 'tab2/prevent',
+        loadChildren: () => import('../tab2/prevent/prevent.module').then( m => m.PreventPageModule)
+      },
+      {
+        path: 'tab2/factors',
+        loadChildren: () => import('../tab2/factors/factors.module').then( m => m.FactorsPageModule)
+      },
+      {
+        path: 'tab2/positions',
+        loadChildren: () => import('../tab2/positions/positions.module').then( m => m.PositionsPageModule)
+      },
+      {
+        path: 'tab2/instructions',
+        loadChildren: () => import('../tab2/instructions/instructions.module').then( m => m.InstructionsPageModule)
       },
       {
         path: 'tab3/team',

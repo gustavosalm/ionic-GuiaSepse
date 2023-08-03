@@ -1,0 +1,35 @@
+<!-- <ion-header></ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+    <ion-card-content>
+      <h1>Instruções para cadeirantes</h1>
+      <img src="../../assets/illustrations/tab2/IllustrationInstructions.svg">
+    </ion-card-content>
+  </ion-card>
+
+  <div class="instructionsSectionInfo">
+    <img src="../../assets/illustrations/tab2/instructions/Illustration1.svg">
+    <p>Use almofadas para deixar o assento e enconsto da cadeira mais confortáveis</p>
+  </div>
+
+  <div class="instructionsSectionInfo hidden">
+    <img src="../../assets/illustrations/tab2/instructions/Illustration2.svg">
+    <p>É contraindicada a aplicação de dispositivos em forma de anel ou argolas.</p>
+  </div>
+
+  <div class="instructionsSectionInfo hidden">
+    <img src="../../assets/illustrations/tab2/instructions/Illustration3.svg">
+    <p>É contra indicada a aplicação de almofadas térmicas, assim como qualquer outro dispositivo de aquecimento de pele</p>
+  </div>
+
+  <div class="footBar" id="instructionsFootBar">
+    <div class="pageIndicator">
+      <div class="pageBullets instructionsPageBullet"></div>
+      <div class="pageBullets instructionsPageBullet"></div>
+      <div class="pageBullets instructionsPageBullet"></div>
+    </div>
+    <button class="pageButtons instructionsPageButtons" color="dark" (click)="previousPage()">Voltar</button>
+    <button class="pageButtons instructionsPageButtons" color="primary" (click)="nextPage()">Próxima</button>
+  </div>
+</ion-content>

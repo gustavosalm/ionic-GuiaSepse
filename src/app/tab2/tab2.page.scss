@@ -1,28 +1,25 @@
-.tabsSectionInfo {
-  position: absolute;
-  right: 0;
-  left: 0;
-  width: 90%;
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: stretch;
-  height: fill-available;
-  overflow-y: scroll;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 11.5rem;
-  margin-top: 3rem;
-  transition: opacity .25s;
+ion-content {
+  --offset-top: 20px !important;
+  z-index: 10;
+  // margin-top: 1em;
+  // overflow-y: scroll;
 
-  p {
-    color: #343538;
-    font: 500 1.125em/1.375em Inter;
-    margin-top: 2em;
-    margin-bottom: 0;
+  &::part(background) {
+    border-radius: 20px 20px 0px 0px !important;
   }
-}
 
-.hidden {
-  opacity: 0 !important;
-  z-index: -1;
+  &::part(scroll) {
+    margin-top: 1em;
+  }
+
+  >div.title {
+    width: 90%;
+    margin: auto;
+
+    h1 {
+      font: 600 1.5em/1.8em Inter;
+      margin: 0;
+      color: #343538;
+    }
+  }
 }

@@ -1,61 +1,51 @@
 <!-- <ion-header [translucent]="true"></ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
-    <ion-card-content>
-      <h1>Orientações para prevenir a Sepse</h1>
-      <img src="../../assets/illustrations/IllustrationAlcool.svg">
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card class="tabsTooltipCard">
-    <ion-card-content>
-      <img src="../../assets/icon/TooltipIcon.svg">
-      <p>Entenda mais sobre os sinais de suspeição em <strong>Como saber se estou com Sepse?</strong></p>
-    </ion-card-content>
-  </ion-card>
-
-  <div class="tabsSectionInfo">
-    <img src="../../assets/illustrations/tab2/Illustration1.svg">
-    <p>Verifique os sinais de<br>suspeição de infecção</p>
+  <div>
+    <ion-tab-button class="navCard" tab="tab2/prevent">
+      <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+        <ion-card-content>
+          <h1>Recomendações para prevenir lesões</h1>
+          <img src="../../assets/illustrations/tab2/IllustrationPrevent.svg">
+          <ion-button>Saiba mais <ion-icon name="arrow-forward"></ion-icon></ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-tab-button>
   </div>
 
-  <div class="tabsSectionInfo hidden">
-    <img src="../../assets/illustrations/tab2/Illustration2.svg">
-    <p>Procure um serviço de saúde para diagnóstico e avaliação do melhor tratamento ou conduta para o seu caso</p>
+  <div>
+    <ion-tab-button class="navCard" tab="tab2/factors">
+      <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+        <ion-card-content>
+          <h1>Fatores que podem causar lesões</h1>
+          <img src="../../assets/illustrations/tab2/IllustrationFactors.svg">
+          <ion-button>Saiba mais <ion-icon name="arrow-forward"></ion-icon></ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-tab-button>
   </div>
 
-  <div class="tabsSectionInfo hidden">
-    <img src="../../assets/illustrations/tab2/Illustration3.svg">
-    <p>Esteja atento e siga as orientações dos profissionais de saúde</p>
+  <div>
+    <ion-tab-button class="navCard" tab="tab2/positions">
+      <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+        <ion-card-content>
+          <h1>Posições recomendadas</h1>
+          <img src="../../assets/illustrations/tab2/IllustrationPositions.svg">
+          <ion-button>Saiba mais <ion-icon name="arrow-forward"></ion-icon></ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-tab-button>
   </div>
 
-  <div class="tabsSectionInfo hidden">
-    <img src="../../assets/illustrations/tab2/Illustration4.svg">
-    <p>O uso inadequado de antibióticos pode aumentar o risco de Sepse.<br><br>
-      Assim como se for prescrito algum antibiótico, é importante fazer o tratamento completo, mesmo que os sintomas desapareçam nos primeiros dias</p>
-  </div>
-
-  <div class="tabsSectionInfo hidden">
-    <img src="../../assets/illustrations/tab2/Illustration5.svg">
-    <p>A maioria das infecções que causam Sepse foram adquiridas fora do hospital</p>
-  </div>
-
-  <div class="tabsSectionInfo hidden">
-    <img src="../../assets/illustrations/tab2/Illustration6.svg">
-    <p>Seja consciente sobre a gravidade da Sepse e compartilhe o seu conhecimento falando sobre isso com seus amigos!</p>
-  </div>
-
-  <div id="tabsFootBar">
-    <div class="pageIndicator">
-      <div class="tabsPageBullet current"></div>
-      <div class="tabsPageBullet"></div>
-      <div class="tabsPageBullet"></div>
-      <div class="tabsPageBullet"></div>
-      <div class="tabsPageBullet"></div>
-      <div class="tabsPageBullet"></div>
-    </div>
-    <button class="tabsPageButtons" color="dark" (click)="previousPage()">Anterior</button>
-    <button class="tabsPageButtons" color="primary" (click)="nextPage()">Próxima</button>
+  <div style="margin-bottom: 1rem;">
+    <ion-tab-button class="navCard" tab="tab2/instructions">
+      <ion-card class="infoCard" style="background-image: url('../../assets/backgrounds/TabDefaultBackground.svg');">
+        <ion-card-content>
+          <h1>Instruções para cadeirantes</h1>
+          <img src="../../assets/illustrations/tab2/IllustrationInstructions.svg">
+          <ion-button>Saiba mais <ion-icon name="arrow-forward"></ion-icon></ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-tab-button>
   </div>
 </ion-content>

@@ -64,6 +64,10 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/politics/politics.module').then( m => m.PoliticsPageModule)
       },
       {
+        path: 'tab4/quiz',
+        loadChildren: () => import('../tab4/quiz/quiz.module').then( m => m.QuizPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

@@ -27,7 +27,7 @@ export class PositionsPage implements OnInit {
   }
 
   nextPage(){
-    if(this.bulletInd < 4){
+    if(this.bulletInd < 3){
       if(this.bulletInd === 0) {
         this.toolTip[0].classList.remove('hidden');
         this.pageButtons[0].innerHTML = 'Anterior';
@@ -36,7 +36,7 @@ export class PositionsPage implements OnInit {
       this.pageBullets[this.bulletInd++].classList.remove('current');
       this.pageBullets[this.bulletInd].classList.add('current');
       this.sections[this.bulletInd].classList.remove('hidden');
-      if(this.bulletInd === 4) {
+      if(this.bulletInd === 3) {
         this.footBar.classList.add('collapsedRight');
       }
     }
@@ -44,7 +44,7 @@ export class PositionsPage implements OnInit {
 
   previousPage() {
     if(this.bulletInd > 0){
-      if(this.bulletInd === 4) {
+      if(this.bulletInd === 3) {
         this.footBar.classList.remove('collapsedRight');
       }
       this.sections[this.bulletInd].classList.add('hidden');

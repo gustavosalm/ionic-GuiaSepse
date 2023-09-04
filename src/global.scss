@@ -154,19 +154,17 @@ ion-content {
   &.greenCard {
     height: auto;
 
-    background: #00BB7E url("./assets/backgrounds/GreenCardBackground.svg") no-repeat;
-    background-position: center right;
-    background-size: 60%;
+    background: #DCFBF3;
 
-    border: 1px solid #00895F;
-    box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
-    padding-right: 40%;
+    border: 1px solid #70FED6;
+    box-shadow: 0px 1px 4px 0px rgba(0, 89, 61, 0.25), 0px -1px 0px 0px rgba(0, 0, 0, 0.25) inset;
+    // padding-right: 40%;
     // padding-top: .5em;
 
     ion-card-content {
       width: 100%;
       // padding: 30%;
-      padding: 1rem 0 2rem 0;
+      padding: 1rem 1.5rem 1rem 1rem;
       // max-height: 45vw;
       height: min-content;
 
@@ -175,11 +173,31 @@ ion-content {
         position: relative;
         // top: 1rem;
         left: 1rem;
-        font: 400 1em/1.5em Inter;
-        color: #FFFFFF;
+        font: 500 1em/1.5em Inter;
+        color: #343538;
+        width: 55%;
+        float: left;
+      }
+
+      img {
+        position: relative;
+        width: 30%;
+        float: right;
+        bottom: unset;
+        left: unset;
+        height: auto;
       }
     }
   }
+}
+
+.sectionInfo {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+  height: fill-available;
+  overflow-y: scroll;
+  margin-bottom: 11.5rem !important;
 }
 
 .navCard {
@@ -289,8 +307,7 @@ ion-content {
 }
 
 .resultOverlay {
-  padding-top: calc(5rem + 54vw);
-  height: -webkit-fill-available;
+  --background: rgba(0, 0, 0, 0.25);
 
   &::part(backdrop){
     opacity: 0.25;

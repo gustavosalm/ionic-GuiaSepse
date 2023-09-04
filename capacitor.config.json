@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "ionic-GuiaSepse",
+	"appId": "io.cordel.guialpp",
+	"appName": "Guia Rápido: LPP",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

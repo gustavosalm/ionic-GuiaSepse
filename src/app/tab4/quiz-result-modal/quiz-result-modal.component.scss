@@ -1,0 +1,80 @@
+#overlayContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  text-align: center;
+
+  #overlayHeader {
+    width: 100%;
+    padding-top: 77.5%;
+    // height: 45%;
+    // min-height: 40vw;
+    // max-height: 60vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .messageContainer {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #ADB5BD;;
+
+    h1 {
+      color: #343538;
+      font: 600 1.5rem/1.8rem Inter;
+      margin: 1.5rem 0;
+    }
+
+    div {
+      width: 100%;
+      // position: absolute;
+      // bottom: 1.5rem;
+      padding: 0 5%;
+
+      button {
+        width: 100%;
+        text-transform: none;
+        border-radius: 10px;
+        height: auto;
+        padding: 1rem 2rem;
+        background-color: #00BB7E;
+        border: 1px solid #00895F;
+        box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
+        color: white;
+        font: 700 1em/1em Inter;
+        margin-bottom: 1em;
+
+        &:nth-child(2) {
+          border: 1px solid rgba(11, 19, 36, 0.07);
+          background: #fff;
+          box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.10) inset, 0px 1px 3px 0px rgba(11, 19, 36, 0.10);
+          color: #525657;
+          margin-bottom: 2em;
+        }
+      }
+    }
+
+    .staticTooltipCard {
+      text-align: left;
+      padding: 0 1rem;
+
+      &.goodTooltip {
+        background: #ABFEE6;
+        border: 1px solid #00895F;
+      }
+
+      &.intermediateTooltip {
+        background: #FFFAE6;
+        border: 1px solid #FAB031;
+      }
+
+      &.badTooltip {
+        background: #FFCFCF;
+        border: 1px solid #E44C5E;
+      }
+    }
+  }
+}

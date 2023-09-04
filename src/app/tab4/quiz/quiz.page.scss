@@ -1,0 +1,201 @@
+ion-header{
+  background: #DCFBF3;
+  padding-bottom: 30px;
+  height: 6.5rem;
+
+  &.solid {
+    background-color: #F8F9FA;
+    z-index: -10;
+  }
+}
+
+ion-content {
+  opacity: 1;
+  transition: opacity .5s;
+  z-index: 1;
+}
+
+.quizContent {
+  --offset-top: 20px !important;
+  z-index: 10;
+
+  &::part(background) {
+    border-radius: 20px 20px 0px 0px !important;
+  }
+
+  &::part(scroll) {
+    margin-top: 0;
+  }
+}
+
+.hidden {
+  z-index: -10;
+  opacity: 0;
+  position: absolute;
+}
+
+.progressBarContainer {
+  position: relative;
+  width: 90%;
+  height: 2rem;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  transition: height .25s, opacity .25s, margin-top .25s;
+
+  p {
+    color: #343538;
+    font: 500 1rem/1.2rem Inter;
+    margin: 0 0 .5rem 0;
+  }
+
+  div {
+    position: absolute;
+    height: -webkit-fill-available;
+    left: 0;
+
+    &.progressBar {
+      border-radius: 10px;
+      background-color: #E9ECEF;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &#fillBar {
+      width: 16.5%;
+      background-color: #00BB7E;
+      transition: width .25s 0s;
+    }
+  }
+
+  +.line {
+    width: 100%;
+    background-color: #CED4DA;
+    height: 0.0625rem;
+  }
+}
+
+#quizQuestion {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  opacity: 1;
+  transition: opacity .5s;
+
+  p {
+    font: 600 1.125rem/1.5rem Inter;
+    color: #343538;
+    margin-bottom: 2rem;
+  }
+
+  .listCheckBox {
+    --background: transparent;
+    border: 1px solid #ced4da00;
+    border-radius: 20px;
+    --border-color: transparent;
+    margin-bottom: .5rem;
+    transition: border-color .25s, background-color .25s;
+
+    &.item-checkbox-checked {
+      border: 1px solid #B4DBD1;
+      background-color: #DCFBF3;
+
+      ion-checkbox {
+        --border-width: 10px;
+      }
+    }
+
+    ion-checkbox {
+      --size: 1.75rem;
+      --checkmark-width: 2px;
+      --background: white;
+      --border-color: #ADB5BD;
+      --border-color-checked: #00BB7E;
+      --background-checked: white;
+      --border-radius: 50%;
+      --border-width: 1.5px;
+      --transition: border .25s;
+    }
+
+    ion-label {
+      color: #343538;
+      position: absolute;
+      left: 3rem;
+      font: 400 1rem/1rem Inter;
+      white-space: normal;
+    }
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+.submitButton {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  background-color: #00BB7E;
+  color: white;
+  font: 700 1em/1em Inter;
+  border: 1px solid #00895F;
+  box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
+  text-transform: none;
+  border-radius: 10px;
+  height: auto;
+  padding: 1rem 2rem;
+  transition: background-color .25s, border-color .25s;
+
+  &.disabled {
+    pointer-events: none;
+    background-color: #00895F;
+    border: 1px solid #00593D;
+  }
+}
+
+.flexContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+
+  >div {
+    width: 100%;
+
+    p {
+      font: 600 1.5rem/1.8rem Inter;
+      color: black;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  button {
+    width: 100%;
+    background-color: #00BB7E;
+    color: white;
+    font: 700 1em/1em Inter;
+    border: 1px solid #00895F;
+    box-shadow: 0px 1px 4px rgba(0, 89, 61, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.25);
+    text-transform: none;
+    border-radius: 10px;
+    height: auto;
+    padding: 1rem 2rem;
+    margin-bottom: 1em;
+
+    &:nth-child(2) {
+      border: 1px solid rgba(11, 19, 36, 0.07);
+      background: #fff;
+      box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.10) inset, 0px 1px 3px 0px rgba(11, 19, 36, 0.10);
+      color: #525657;
+      margin-bottom: 2em;
+    }
+  }
+}

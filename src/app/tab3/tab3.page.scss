@@ -18,16 +18,25 @@
 }
 
 .tab3SubPageHeader {
-  width: 90%;
-  margin: auto;
-  margin-top: 2.5em;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #F8F9FA;
+
+  width: 100%;
+  padding: 2.5em 5% 1rem 5%;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #E8E9EB;
+
+  .line {
+    position: absolute;
+    bottom: -2px;
+    width: 90%;
+    border-bottom: 2px solid #E8E9EB;
+  }
 
   img {
     width: 1.5em;
@@ -151,4 +160,13 @@
     }
   }
 
+}
+
+.appDocs {
+  width: 100%;
+  padding: 0 .75em;
+
+  p {
+    color: black;
+  }
 }

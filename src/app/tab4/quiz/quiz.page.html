@@ -1,0 +1,50 @@
+<ion-header id="quizHeader">
+</ion-header>
+
+<ion-content [fullscreen]="true" id="quizContent" class="quizContent">
+  <div class="progressBarContainer containerTop">
+    <p id="fillBarText">1 de 6</p>
+    <div class="progressBar">
+      <div id="fillBar"></div>
+    </div>
+  </div>
+  <div class="line"></div>
+
+  <div id="quizQuestion">
+    <p>1. O que pode causar uma lesão por pressão na pele?</p>
+    <ion-item class="listCheckBox">
+      <ion-label>Um objeto cortante</ion-label>
+      <ion-checkbox (ionChange)="checkingBox(0)"></ion-checkbox>
+    </ion-item>
+    <ion-item class="listCheckBox">
+      <ion-label>Pressão constante entre a pele e uma superfície</ion-label>
+      <ion-checkbox (ionChange)="checkingBox(1)"></ion-checkbox>
+    </ion-item>
+    <ion-item class="listCheckBox">
+      <ion-label>Um trauma físico</ion-label>
+      <ion-checkbox (ionChange)="checkingBox(2)"></ion-checkbox>
+    </ion-item>
+    <ion-item class="listCheckBox">
+      <ion-label>Uma infecção</ion-label>
+      <ion-checkbox (ionChange)="checkingBox(3)"></ion-checkbox>
+    </ion-item>
+  </div>
+
+  <button class="submitButton disabled" (click)="submitAnswer()">Responder</button>
+</ion-content>
+
+<ion-content [fullscreen]="true" id="quizLastScreen" class="hidden">
+  <div class="flexContainer">
+    <div class="flexContainer">
+      <div></div>
+      <div>
+        <img src="../../../assets/illustrations/IllustrationEndQuiz.svg">
+        <p>Parabéns!<br>Você concluiu o Quiz.</p>
+      </div>
+      <div>
+        <button (click)="leaveQuiz()">Voltar para o início</button>
+        <button (click)="resetQuiz()">Refazer Quiz</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

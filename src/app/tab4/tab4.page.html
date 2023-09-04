@@ -1,9 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tab4</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <div class="flexContainer">
+    <div></div>
+    <div>
+      <img src="../../assets/illustrations/IllustrationQuizHome.svg">
+      <p>Agora é hora de praticar o que você aprendeu!</p>
+    </div>
+    <button (click)="displayQuiz()">Começar Quiz</button>
+  </div>
 </ion-content>
